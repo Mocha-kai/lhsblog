@@ -1,3 +1,4 @@
+import NavBottom from '@/components/common/nav';
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
@@ -11,9 +12,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
         <html lang="en">
-            <body className={inter.className} style={{ width: '100%', height: '100%' }}>
-                {children}
-            </body>
+            <NavBottom />
+            <body className={inter.className}>{children}</body>
         </html>
     );
 }
