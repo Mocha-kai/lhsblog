@@ -1,0 +1,14 @@
+.header-div {
+    padding: 10px 20px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    height: 80px;
+    line-height: 70px;
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.header-div > span {
+    border-bottom: 1px solid black;
+}

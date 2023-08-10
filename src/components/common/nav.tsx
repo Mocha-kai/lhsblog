@@ -1,6 +1,6 @@
 'use client';
 
-import styles from '@/components/common/commonStyle/page.module.css';
+import styles from '@/components/common/commonStyle/nav.module.css';
 import Link from 'next/link';
 
 const NavBottom = () => {
@@ -25,14 +25,14 @@ const NavBottom = () => {
         {
             id: 'm02',
             url: '/career',
-            name: 'careerPage',
+            name: 'CareerPage',
             as: '/dashboard',
             h2: 'Career',
             p: '경력',
         },
         {
             id: 'm03',
-            url: '/Good',
+            url: '/good',
             name: 'GoodPage',
             as: '/dashboard',
             h2: 'Good',
