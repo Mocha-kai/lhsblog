@@ -7,40 +7,23 @@
     align-items: center;
     flex-direction: column;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.career-image {
-    width: 600px;
-    height: 300px;
-    @media (max-width: 768px) {
-        width: 400px;
+    @media (max-width: 280px) {
+        height: 450px;
     }
 }
 
-.spring-div {
+.lang-div {
+    text-align: center;
+    margin-top: 40px;
+    margin-left: 4px;
     width: 60px;
-    font-size: 10px;
-    margin: 5px;
-    padding: 4px 12px;
-    box-shadow: 0px 4px 0px #87a86f;
-    background: #82c8a0;
-}
-
-.spring-div::active {
-    box-shadow: 0 0 #87a86f;
-    background-color: #87a86f;
-}
-
-.nextJs-div {
-    width: 60px;
-    font-size: 10px;
-    margin: 5px;
-    padding: 4px 12px;
+    font-size: 12px;
+    font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
-    box-shadow: 0px 4px 0px #87a86f;
-    background: #82c8a0;
-}
-.nextJs-div::active {
-    box-shadow: 0 0 #87a86f;
-    background-color: #87a86f;
+    font-style: italic;
+    height: 30px;
+    line-height: 30px;
+    color: white;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.9);
 }

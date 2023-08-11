@@ -49,9 +49,11 @@ const EmblaCarousel = (props: PropType) => {
                                 <div className={Styles['slide-No-item-div']}>No Image</div>
                             )}
 
-                            <div>{slide.companyName}</div>
-                            <div>{slide.projectName}</div>
-                            <div>{slide.useLang}</div>
+                            <div className={Styles['content-div']}>{slide.companyName}</div>
+                            <div className={Styles['content-div']}>{slide.projectName}</div>
+                            <div className={Styles['lang-div']}>
+                                <div>{slide.useLang}</div>
+                            </div>
                         </div>
                     ))}
                 </div>

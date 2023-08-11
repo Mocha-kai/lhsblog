@@ -4,22 +4,27 @@ import EmblaCarousel from '@/components/common/emblaCarousel';
 import Image from 'next/image';
 import Styles from './career.module.css';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
 const CareerPage = () => {
-    let imgWidth = 0;
-    let windowWidth = 0;
+    const [windowWidth, setWindowWidth] = useState(0);
 
     useEffect(() => {
-        windowWidth = window.innerWidth;
-    }, [windowWidth]);
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth);
+        };
 
-    if (windowWidth >= 450) {
-        imgWidth = 600;
-    } else {
-        imgWidth = 400;
-    }
+        window.addEventListener('resize', handleResize);
 
+        setWindowWidth(window.innerWidth);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
+    const maxWidth = 600;
+    const imageWidth = Math.min(windowWidth, maxWidth);
     return (
         <>
             <div className={Styles['main-div']}>
@@ -27,26 +32,33 @@ const CareerPage = () => {
                     slides={[
                         {
                             companyName: 'dunet',
-                            projectName: '학생역량시스팀-LMS',
-                            useLang: <div className={Styles['spring-div']}>spring</div>,
+                            projectName: '학생역량시스템-LMS',
+                            useLang: <div className={Styles['lang-div']}>#spring</div>,
                             image: '',
                         },
                         {
                             companyName: 'KTDS',
-                            projectName: 'CodeEyes-Guide Page',
-                            useLang: <div className={Styles['spring-div']}>spring</div>,
+                            projectName: 'CodeEyes-monitoring',
+                            useLang: <div className={Styles['lang-div']}>#spring</div>,
                             image: '',
                         },
                         {
                             companyName: 'mocha-company',
                             projectName: 'H201-B2B',
-                            useLang: <div className={Styles['nextJs-div']}>Next.js</div>,
+                            useLang: (
+                                <div style={{ display: 'flex' }}>
+                                    <div className={Styles['lang-div']}>#Next.js</div>
+                                    <div className={Styles['lang-div']}>#React</div>
+                                    <div className={Styles['lang-div']}>#AWS</div>
+                                </div>
+                            ),
                             image: (
                                 <Image
+                                    style={{ maxWidth: imageWidth, width: '100%' }}
                                     src={'/images/h201client.png'}
                                     className={Styles['career-image']}
                                     alt="Image"
-                                    width={imgWidth}
+                                    width={imageWidth}
                                     height={300}
                                     priority
                                 />

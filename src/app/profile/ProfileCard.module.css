@@ -8,6 +8,9 @@
     /* Add the following styles for mobile screens */
     @media (max-width: 768px) {
     }
+    @media (max-width: 280px) {
+        height: 450px;
+    }
 }
 
 .profile-card {
