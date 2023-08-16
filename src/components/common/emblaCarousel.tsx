@@ -46,7 +46,7 @@ const EmblaCarousel = (props: PropType) => {
                             {slide.image !== '' ? (
                                 <div className={Styles['slide-item-div']}>{slide.image}</div>
                             ) : (
-                                <div className={Styles['slide-No-item-div']}>No Image</div>
+                                <div className={Styles['slide-No-item-div']}></div>
                             )}
 
                             <div className={Styles['content-div']}>{slide.companyName}</div>

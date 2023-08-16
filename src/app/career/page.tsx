@@ -31,15 +31,27 @@ const CareerPage = () => {
                 <EmblaCarousel
                     slides={[
                         {
-                            companyName: 'dunet',
+                            companyName: 'Dunet',
                             projectName: '학생역량시스템-LMS',
-                            useLang: <div className={Styles['lang-div']}>#spring</div>,
+                            useLang: (
+                                <div style={{ display: 'flex' }}>
+                                    <div className={Styles['lang-div']}>#spring</div>
+                                    <div className={Styles['lang-div']}>#Java</div>
+                                    <div className={Styles['lang-div']}>#Oracle</div>
+                                </div>
+                            ),
                             image: '',
                         },
                         {
                             companyName: 'KTDS',
                             projectName: 'CodeEyes-monitoring',
-                            useLang: <div className={Styles['lang-div']}>#spring</div>,
+                            useLang: (
+                                <div style={{ display: 'flex' }}>
+                                    <div className={Styles['lang-div']}>#spring</div>
+                                    <div className={Styles['lang-div']}>#Java</div>
+                                    <div className={Styles['lang-div']}>#postgresql</div>
+                                </div>
+                            ),
                             image: '',
                         },
                         {

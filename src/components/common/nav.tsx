@@ -16,14 +16,6 @@ const NavBottom = () => {
         },
         {
             id: 'm01',
-            url: '/study',
-            name: 'StudyPage',
-            as: '/dashboard',
-            h2: 'Study',
-            p: '자료',
-        },
-        {
-            id: 'm02',
             url: '/career',
             name: 'CareerPage',
             as: '/dashboard',
@@ -31,12 +23,21 @@ const NavBottom = () => {
             p: '경력',
         },
         {
+            id: 'm02',
+            url: '/study',
+            name: 'StudyPage',
+            as: '/dashboard',
+            h2: 'Study',
+            p: '자료',
+        },
+
+        {
             id: 'm03',
             url: '/good',
             name: 'GoodPage',
             as: '/dashboard',
             h2: 'Good',
-            p: '좋은것',
+            p: '기억해둘 자료',
         },
     ];
 
